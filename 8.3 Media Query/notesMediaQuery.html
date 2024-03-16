@@ -1,0 +1,45 @@
+Media query:
+
+the parameter is the breakpoint
+
+<div></div>
+
+div{
+    background-color: clue
+    height: 200px
+    width: 200px
+}
+
+@media(max-width: 600px){
+    div{
+        height: 100px
+        width: 100px
+    }
+}
+
+@media(max-width: 600px){ from 600px lower 
+    h1{
+        font-size: 15px
+    }
+}
+
+@media(min-width: 600px){ from 600px upper target 2400px page e.g
+    h1{
+        font-size: 15px
+    }
+}
+
+@media(min-width: 600px) and (max-witdth:900px){ in this interval [600px;900px]
+
+}
+
+@media(max-width: 600px) and (min-witdth:900px){ in this interval ]0px;600px]and[900px;2400px[
+
+}
+
+@media screen(orientation: landscape){
+    targeting the screen or print
+}
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+

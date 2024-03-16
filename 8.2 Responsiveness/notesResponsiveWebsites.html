@@ -1,0 +1,88 @@
+Responsive websites
+
+<!--A responsive website is a website that can adapt to any screen size and still
+    looking pleasant to the client
+    
+There are 4 ways to do responsive websites
+    1 - media queries
+    2 - css grid
+    3 - css flexbox
+    4 - external frameworks e.g. Bootstrap
+
+1:
+    @media(max-width: 600px){
+      ->  CSS for screens below or eqaul to 600px wide
+    }
+
+2:--> 
+    <div class="grid-container">
+        <div class="first card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+    .grid-container{
+        display: grid;  we are gonna use the css grid for the layout 
+        grid-template-columns: 1fr 1fr;     we are gonna have 2 columns - fr=equal fraction
+        grid-template-rows: 100px 200px 200px;      we should create 3 different rows top=100px in height middle = 200px in height, last = 200px in height
+        gap 30px;   gap between rows
+    }
+
+    .first{
+        grid-template-column: span 2;   
+    }
+
+    .card{
+        background-color: blue;
+    }
+
+<!--
+    CSS Flexbox
+
+-->
+
+<div class="flex-container">
+        <div class="first card"></div>
+        <div class="second card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+</div>
+
+.flex-container{
+    display: flex
+}
+
+.card{
+    background: blue
+    border: 30px solid white
+    height: 100px
+    flex: 1  ->   makes the width between the cards equal
+}
+
+.first{
+    flex: 2     ->   twice the width
+}
+.second{
+    flex: 0.5       -> half the width
+}
+everything will change depending on the total width
+<!--
+    Boostrap Framework(external to css, we have to bring in)
+    css predefined code
+    Boostrap based on flexbox 12 equal secctions
+    col- 6 = it's gonna take 6 little secctions -> 50% width 
+    easily getting new styles    
+-->
+
+<div class="container">
+<div class="row"> 
+<div class="card col-6">Card</div>
+<div class="card col-2">Card</div>
+<div class="card col-4">Card</div>
+</div>
+</div>
+
+
+
